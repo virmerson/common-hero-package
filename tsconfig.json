@@ -1,21 +1,19 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "module": "commonjs", // Ensure compatibility with CommonJS environments (NestJS default)
+    "target": "ES2017", // Keep target modern, but compatible with many environments
+    "declaration": true, // Generate type declaration files (.d.ts) for use by consumers
+    "removeComments": true, // Remove comments from the compiled files
+    "emitDecoratorMetadata": true, // Enables decorator metadata, required by NestJS
+    "experimentalDecorators": true, // Enables support for decorators
+    "sourceMap": true, // Generates source maps for easier debugging
+    "outDir": "./dist", // Specifies output directory for compiled files
+    "baseUrl": "./", // Base directory for resolving module imports
+    "strict": true, // Enable all strict type-checking options
+    "moduleResolution": "node", // Node-style module resolution
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "skipLibCheck": true // Skips type checks on library files for faster builds
+  },
+  "include": ["src/**/*.ts"], // Include all TypeScript files in src directory
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist folders
 }

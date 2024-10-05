@@ -1,9 +1,5 @@
 
-export * from './auth';
 export * from './database';
-export * from './models';
-export * from './constants';
-export * from './decorators';
-export * from './dto';
-export * from './health';
-export * from './logger';
+export * from "./schemas"
+
+console.log('Importing common hero package 3' )
