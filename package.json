@@ -1,6 +1,6 @@
 {
   "name": "common-hero-package",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "",
   "author": "",
   "private": false,
@@ -17,7 +17,8 @@
     "@nestjs/mongoose": "^10.0.10",
     "mongoose": "^8.7.0",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "joi": "^17.11.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
