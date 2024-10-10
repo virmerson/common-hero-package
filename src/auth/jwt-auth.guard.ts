@@ -24,11 +24,16 @@ import {
     canActivate(
       context: ExecutionContext,
     ): boolean | Promise<boolean> | Observable<boolean> {
+      const cookies = context.switchToHttp().getRequest().cookies;
+      const headers = context.switchToHttp().getRequest().headers;
+     
       const jwt =
-        context.switchToHttp().getRequest().cookies?.Authentication ||
-        context.switchToHttp().getRequest().headers?.authentication;
-  
+        cookies?.Authentication ||
+        headers?.authentication ||
+        headers?.cookie?.split('=')[1];
+        
       if (!jwt) {
+        
         return false;
       }
   
