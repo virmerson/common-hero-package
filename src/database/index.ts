@@ -1,3 +1,7 @@
-export * from './database.module';
-export * from './abstract.repository';
-export * from './abstract.schema';
+export * from './mongoose/database.module';
+export * from './mongoose/abstract.repository';
+export * from './mongoose/abstract.schema';
+
+export * from './typeorm/database.module';
+export * from './typeorm/abstract.repository';
+export * from './typeorm/abstract.entity';
